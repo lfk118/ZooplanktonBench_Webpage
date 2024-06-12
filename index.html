@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="ZooplanktonCV: A Benchmark Dataset for Zooplankton Recognition in Images and Videos"/>
+  <meta property="og:description" content="We present the ZooplanktonCV dataset that features a rich dataset containing images and videos of zooplankton in various water ecosystems and defines benchmark tasks to detect, classify, and track them in challenging settings"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="ZooplanktonCV: A Benchmark Dataset for Zooplankton Recognition in Images and Videos">
+  <meta name="twitter:description" content="We present the ZooplanktonCV dataset that features a rich dataset containing images and videos of zooplankton in various water ecosystems and defines benchmark tasks to detect, classify, and track them in challenging settings">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ZooplanktonCV: A Benchmark Dataset for Zooplankton Recognition in Images and Videos</title>
+  <link rel="icon" type="image/x-icon" href="static/images/zooplankton.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">ZooplanktonCV: A Benchmark Dataset for Zooplankton Recognition in Images and Videos</h1>
+                <div class="is-size-5 publication-authors">
+                    <!-- Paper authors -->
+                    <span class="author-block">
+                        <a href="https://www.cs.uga.edu/directory/people/fukun-liu" target="_blank">Fukun Liu</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="https://www.skio.uga.edu/people/faculty/adam-greer/" target="_blank">Adam T Greer</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="https://gengchenmai.github.io/" target="_blank">Gengchen Mai</a>,
+                    </span>
+                    <span class="author-block">
+                        <a href="https://jinsungit.github.io/" target="_blank">Jin Sun</a>
+                    </span>
+                </div>
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block">University of Georgia</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                </div>
+
+                <span class="link-block">
+                    <a href="static/pdfs/Classification_table_YOLOv8.pdf" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Experimental results of YOLOv8</span>
+                    </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                    <a href="https://github.com/lfk118/ZooplanktonCV" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                    </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+            <p>
+                Plankton are small drifting organisms found throughout the world’s oceans. One component of this plankton community is the zooplankton, which includes gelatinous animals and crustaceans (e.g. shrimp),
+                as well as the early life stages (i.e., eggs and larvae) of many commercially important fishes. Being able to monitor zooplankton abundances accurately and understand how populations change in relation 
+                to ocean conditions is invaluable to marine science research, with potential applications to the marine seafood industry. While new imaging technologies generate massive amounts of video data of zooplankton,
+                analyzing them using standard computer vision tools developed for general objects turns out to be highly challenging. In this work, we present the ZooplanktonCV dataset that features a rich dataset containing
+                images and videos of zooplankton in various water ecosystems and defines benchmark tasks to detect, classify, and track them in challenging settings, including highly cluttered environments, living vs non-living
+                classification, objects with similar shapes, and relatively small objects. Our dataset presents unique challenges and opportunities for state-of-the-art computer vision systems to evolve and improve visual
+                understanding in a dynamic environment with huge variations.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero is-small ">
+  <div class="hero-body">
+      <div class="container">
+          <h2 class="title is-3">Raw images from our dataset</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_1_10.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 10 meters.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_2_10.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 10 meters.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_3_25.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 25 meters.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_4_25.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 25 meters.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_5_35.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 35 meters.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/raw_6_35.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Raw data from 35 meters.
+                  </h2>
+              </div>
+          </div>
+      </div>
+</div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+      <div class="container">
+          <h2 class="title is-3">Object detection results</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/DINO_example_1.PNG" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/DINO_example_2.PNG" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/DINO_example_3.PNG" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
+                  </h2>
+              </div>              
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/YOLO_Classification_example.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Results from fine-tuned YOLOv8 model for doing zooplanktons classification.
+                  </h2>
+              </div>
+              <div class="item">
+                  <!-- Your image here -->
+                  <img src="static/images/YOLO_Living_example.jpg" alt="MY ALT TEXT" />
+                  <h2 class="subtitle has-text-centered">
+                      Results from fine-tuned YOLOv8 model for doing zooplanktons detection.
+                  </h2>
+              </div>
+          </div>
+      </div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <!-- Paper video. -->
+            <h2 class="title is-3">A sample in our video dataset</h2>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="publication-video">
+                        <!-- Youtube embed code here -->
+                        <iframe src="https://www.youtube.com/embed/I50-Z1gA33Y?si=5tjwlFvI5EYfNhM0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Object tracking in our video dataset</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">          
+            <div class="publication-video">
+                <!-- Youtube embed code here -->                
+                <iframe src="https://www.youtube.com/embed/2E7kgObeZfQ?si=r2cO9qH16n9uEleD" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Performance metrics</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                    <!-- Your image here -->
+                    <img src="static/images/DINO_summary.PNG" alt="DINO summary on classification" />
+                    <h2 class="subtitle has-text-centered">
+                        The zero-shot performance of Grounding DINO on the zooplankton fine-grained classification task under different confidence thresholds.
+                    </h2>
+                </div>
+                <div class="item">
+                    <!-- Your image here -->
+                    <img src="static/images/DINO_summary_living.PNG" alt="DINO summary on detection" />
+                    <h2 class="subtitle has-text-centered">
+                        The zero-shot performance of Grounding DINO on living zooplankton detection task under
+                        different confidence thresholds.
+                    </h2>
+                </div>
+                <div class="item">
+                    <!-- Your image here -->
+                    <img src="static/images/YOLO_summary.PNG" alt="YOLO summary on classification" />
+                    <h2 class="subtitle has-text-centered">
+                        Experimental results of YOLOv8 on the fine-grained zooplankton species classification task.
+                        'mix' refers to the combined dataset from all three depths—10 meters, 25 meters, and 35 meters.
+                    </h2>
+                </div>
+                <div class="item">
+                    <!-- Your image here -->
+                    <img src="static/images/GPT_summary.PNG" alt="GPT summary on classification" />
+                    <h2 class="subtitle has-text-centered">
+                        GPT-4V fine-grained classification results on ZooplanktonCV. 'Correct' indicates the number of images correctly classified. 
+                        'Classification' indicates the number of images predicted by GPT-4V, and 'Instances' shows the total number of images in each class in ground truth data.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
