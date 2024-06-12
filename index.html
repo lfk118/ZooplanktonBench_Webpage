@@ -154,42 +154,42 @@
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_1_10.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_1_10.jpg" alt="raw data 1" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 10 meters.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_2_10.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_2_10.jpg" alt="raw data 2" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 10 meters.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_3_25.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_3_25.jpg" alt="raw data 3" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 25 meters.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_4_25.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_4_25.jpg" alt="raw data 4" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 25 meters.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_5_35.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_5_35.jpg" alt="raw data 5" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 35 meters.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/raw_6_35.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/raw_6_35.jpg" alt="raw data 6" />
                         <h2 class="subtitle has-text-centered">
                             Raw data from 35 meters.
                         </h2>
@@ -204,38 +204,48 @@
         <div class="hero-body">
             <div class="container">
                 <h2 class="title is-3">Object detection results</h2>
+                <p>
+                    For <b>YOLOv8</b>, we train the model on different datasets.<br />
+
+                    On 10 meters dataset. we have 721 images for training, 298 images for testing.<br />
+                    On 25 meters dataset. we have 647 images for training, 333 images for testing.<br />
+                    On 35 meters dataset, we have 959 images for training, 403 images for testing.<br />
+                    On all mix dataset(contains images from all 3 depths), we have 2337 images for training, 1034 images for testing.<br />
+
+                    For <b>GroundingDINO</b>, we do zero-shot object detection on the same dataset as YOLOv8.
+                </p>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/DINO_example_1.PNG" alt="MY ALT TEXT" />
+                        <img src="static/images/DINO_example_1.PNG" alt="GroundingDINO example" />
                         <h2 class="subtitle has-text-centered">
                             Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/DINO_example_2.PNG" alt="MY ALT TEXT" />
+                        <img src="static/images/DINO_example_2.PNG" alt="GroundingDINO example" />
                         <h2 class="subtitle has-text-centered">
                             Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/DINO_example_3.PNG" alt="MY ALT TEXT" />
+                        <img src="static/images/DINO_example_3.PNG" alt="MGroundingDINO example" />
                         <h2 class="subtitle has-text-centered">
                             Result from GroundingDINO, the red bounding boxes represent the ground truth while the green boxes represent the predict results.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/YOLO_Classification_example.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/YOLO_Classification_example.jpg" alt="zooplanktons classification" />
                         <h2 class="subtitle has-text-centered">
                             Results from fine-tuned YOLOv8 model for doing zooplanktons classification.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/YOLO_Living_example.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/YOLO_Living_example.jpg" alt="zooplanktons detection" />
                         <h2 class="subtitle has-text-centered">
                             Results from fine-tuned YOLOv8 model for doing zooplanktons detection.
                         </h2>
