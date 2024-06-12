@@ -1,0 +1,153 @@
+{
+  "@type": "sc:Dataset",
+  "name": "ZooplanktonCV",
+  "citeAs": "",
+  "description": "ZooplanktonCV dataset that features a rich dataset containing images and videos of zooplankton in various water ecosystems and defines benchmark tasks to detect, classify, and track them in challenging settings, including highly cluttered environments, living vs non-living classification, objects with similar shapes, and relatively small objects.",
+  "license": "cc-by-4.0",
+  "url": "https://lfk118.github.io/ZooplanktonCV_Webpage/",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "Marine_dataset.zip",
+      "name": "Marine_dataset.zip",
+      "contentUrl": "https://outlookuga-my.sharepoint.com/:f:/g/personal/fl79416_uga_edu/EhtmuP6IOTpErtRhcVR3s-oBegeA4cOb46Bkpel6eyMDFg?e=gbNeaE",
+      "encodingFormat": "application/zip",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "model.zip",
+      "name": "model.zip",
+      "contentUrl": "https://outlookuga-my.sharepoint.com/:f:/g/personal/fl79416_uga_edu/EhtmuP6IOTpErtRhcVR3s-oBegeA4cOb46Bkpel6eyMDFg?e=gbNeaE",
+      "encodingFormat": "application/zip",
+      "sha256": "sha256"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "image-files",
+      "name": "image-files",
+      "containedIn": [
+        { "@id": "Marine_dataset.zip" }
+      ],
+      "encodingFormat": "image/jpeg",
+      "includes": "*.jpg"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "label-files",
+      "name": "label-files",
+      "containedIn": [
+        { "@id": "Marine_dataset.zip" }
+      ],
+      "encodingFormat": "txt/plain",
+      "includes": "*.txt"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "images",
+      "name": "images",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "images/image_filename",
+          "name": "image_filename",
+          "description": "The filename of the image.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": { "@id": "image-files" },
+            "extract": { "fileProperty": "filename" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "images/image_content",
+          "name": "image_content",
+          "description": "The content of the image.",
+          "dataType": "sc:ImageObject",
+          "source": {
+            "fileSet": { "@id": "image-files" },
+            "extract": { "fileProperty": "content" }
+          }
+        }        
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "labels",
+      "name": "labels",      
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "labels/categories",
+          "name": "categories",
+          "description": "The first column of the txt file represents the categories",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileSet": { "@id": "label-files" },
+            "extract": { "fileProperty": "content" }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "labels/loaction",
+          "name": "loaction",
+          "description": "The second to fifth columns of the txt file represents the location in xywh format",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": { "@id": "label-files" },
+            "extract": { "fileProperty": "content" }
+          }
+        }
+      ]
+    }   
+  ],
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "conformsTo": "http://mlcommons.org/croissant/1.0"
+}
